@@ -1,0 +1,55 @@
+encoding="UTF-8"
+from random import choice
+
+
+class Dealer:
+    def __init__(self ) :
+        self.valeurs = ['2','3','4','5','6','7','8','9','10','J','Q','K','A']
+        self.Couleurs = ['\u2666', '\u2665', '\u2660', '\u2663']
+        self.Sabot = []
+    
+    #def __init__ (self, valeurs, couleurs, cartes, Sabot):
+    #    self.couleurs = couleurs
+    #    self.valeurs = valeurs
+    #    self.cartes = cartes
+    #    self.Sabot = Sabot
+
+    def tirage (self):
+        cartes =choice(self.valeurs)
+        Couleurs = choice(self.Couleurs)
+        return  cartes, Couleurs
+        
+    def sabot (self):
+        i = 0
+              
+        while i < 52:
+            #b = Dealer()
+            c = self.tirage()
+            if c not in self.Sabot:
+                 self.Sabot.append(c)
+                 i += 1
+      
+            else :
+                 i = i
+                 continue
+
+        return self.Sabot
+
+
+    def distribution (self ) :
+#       Deck = Dealer()
+        #CSAB = Sabot
+        y = 0
+        while y < 52:
+            CarteDist = self.Sabot[y]
+            Carte +=1
+            return CarteDist, CSAB
+        
+
+
+
+
+DE = Dealer()
+dist, CSAB = DE.distribution()
+print(dist)
+print (CSAB)
